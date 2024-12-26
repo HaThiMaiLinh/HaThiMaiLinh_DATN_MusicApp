@@ -25,10 +25,10 @@
     <string name="label_youtube">Youtube</string>
     <string name="label_zalo">Zalo</string>
 
-    <string name="feedback_name">Họ và tên (*)</string>
+    <string name="feedback_name">Họ và tên</string>
     <string name="feedback_email">Email</string>
     <string name="feedback_phone">Số điện thoại</string>
-    <string name="feedback_comment">Bình luận (*)</string>
+    <string name="feedback_comment">Bình luận</string>
     <string name="send_feedback">Gửi phản hồi</string>
 
     <string name="play_all">Phát tất cả</string>

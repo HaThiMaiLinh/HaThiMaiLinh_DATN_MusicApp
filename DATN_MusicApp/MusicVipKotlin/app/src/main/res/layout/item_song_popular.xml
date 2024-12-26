@@ -67,6 +67,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/define_dimen_2"
             android:textColor="@color/red"
+            android:visibility="invisible"
             android:textSize="@dimen/text_size_xsmall" />
     </LinearLayout>
 
@@ -81,17 +82,19 @@
         tools:ignore="UseCompoundDrawables">
 
         <ImageView
-            android:id="@+id/img_favorite"
-            android:layout_width="@dimen/define_dimen_24"
-            android:layout_height="@dimen/define_dimen_24"
-            android:layout_marginEnd="@dimen/define_dimen_18"
-            android:src="@drawable/ic_unfavorite"/>
-
-        <ImageView
             android:id="@+id/img_more_option"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_more_option" />
+            android:src="@drawable/ic_more_option"
+            android:visibility="invisible"
+            />
+
+        <ImageView
+        android:id="@+id/img_favorite"
+        android:layout_width="@dimen/define_dimen_24"
+        android:layout_height="@dimen/define_dimen_24"
+        android:layout_marginEnd="@dimen/define_dimen_18"
+        android:src="@drawable/ic_unfavorite"/>
     </LinearLayout>
 
 </RelativeLayout>

@@ -1,6 +1,7 @@
 package com.pro.music.activity
 
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
@@ -33,6 +34,26 @@ class SignInActivity : BaseActivity() {
         }
         binding?.btnSignIn?.setOnClickListener { onClickValidateSignIn() }
         binding?.tvForgotPassword?.setOnClickListener { onClickForgotPassword() }
+
+        // Lắng nghe sự kiện click vào RadioButton Admin
+        binding?.rdbAdmin?.setOnCheckedChangeListener { _, isChecked ->
+            toggleAdminUI(isChecked)
+        }
+
+        // Lắng nghe sự kiện click vào RadioButton User
+        binding?.rdbUser?.setOnCheckedChangeListener { _, isChecked ->
+            toggleAdminUI(!isChecked)
+        }
+    }
+
+    private fun toggleAdminUI(isAdmin: Boolean) {
+        if (isAdmin) {
+            binding?.tvBanchuacotaikhoan?.visibility = View.GONE
+            binding?.tvDangky?.visibility = View.GONE
+        } else {
+            binding?.tvBanchuacotaikhoan?.visibility = View.VISIBLE
+            binding?.tvDangky?.visibility = View.VISIBLE
+        }
     }
 
     private fun onClickForgotPassword() {
@@ -50,6 +71,7 @@ class SignInActivity : BaseActivity() {
             Toast.makeText(this@SignInActivity, getString(R.string.msg_email_invalid), Toast.LENGTH_SHORT).show()
         } else {
             if (binding?.rdbAdmin?.isChecked == true) {
+                toggleAdminUI(true)
                 if (!strEmail.contains(Constant.ADMIN_EMAIL_FORMAT)) {
                     Toast.makeText(this@SignInActivity, getString(R.string.msg_email_invalid_admin), Toast.LENGTH_SHORT).show()
                 } else {

@@ -10,7 +10,7 @@
     <color name="nen">#3C3831</color>
     <color name="colorPrimary">#07112a</color>
 <!--    <color name="colorPrimaryDark">#07112a</color>-->
-    <color name="colorPrimaryDark">#072A0D</color>
+    <color name="colorPrimaryDark">#093E13</color>
 
     <color name="colorAccent">#ff835f</color>
     <color name="texthint">#95746B</color>
@@ -30,6 +30,7 @@
     <color name="xam">#4A4545</color>
     <color name="red">#F80A0A</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="grey">#EEF4EC</color>
     <color name="xam2">#393838</color>
     <color name="blue">#2196F3</color>
     <color name="green">#25994C</color>
